@@ -52,14 +52,28 @@ export default function Navbar() {
 
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top roluad-navbar">
         <div className="container">
-          <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
-            <span className="brand-icon">
+          <Link className="navbar-brand d-flex align-items-center gap-3" to="/">
+            <div className="brand-icon">
               <img src={logo} alt="ROLUAD logo" />
-            </span>
-            <span className="fw-bold brand-title">Botica ROLUAD</span>
+            </div>
+
+            <div className="d-flex flex-column">
+              <span className="fw-bold brand-title">
+                Botica ROLUAD
+              </span>
+
+              <small className="brand-subtitle">
+                Salud y bienestar online
+              </small>
+            </div>
           </Link>
 
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
 
@@ -107,7 +121,7 @@ export default function Navbar() {
                       className="dropdown-item"
                       onClick={() => setTema('light')}
                     >
-                       Light
+                      Light
                     </button>
                   </li>
 
@@ -116,7 +130,7 @@ export default function Navbar() {
                       className="dropdown-item"
                       onClick={() => setTema('dark')}
                     >
-                       Dark
+                      Dark
                     </button>
                   </li>
 
@@ -125,7 +139,7 @@ export default function Navbar() {
                       className="dropdown-item"
                       onClick={() => setTema('auto')}
                     >
-                       Auto
+                      Auto
                     </button>
                   </li>
                 </ul>
